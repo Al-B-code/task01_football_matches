@@ -49,7 +49,7 @@ SELECT DISTINCT hometeam AS team_name FROM matches WHERE hometeam LIKE '%City%';
 
 ```sql
 <!-- Copy solution here -->
-SELECT Count(DISTINCT hometeam) FROM matches WHERE division_code = 'F1'
+SELECT Count(DISTINCT hometeam) FROM matches WHERE division_code LIKE 'F%'
 
 
 
@@ -88,6 +88,9 @@ SELECT hometeam, awayteam, fthg, ftag, (fthg + ftag) AS totalgoals FROM matches 
 ```sql
 <!-- Copy solution here -->
 SELECT division_code, season, SUM(ftag + fthg) AS total_goals FROM matches GROUP BY division_code, season ORDER BY total_goals DESC LIMIT 1;
+
+SELECT name FROM divisions WHERE code = 'EC';
+
 
 ```
 
