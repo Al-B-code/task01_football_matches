@@ -32,7 +32,7 @@ SELECT name FROM divisions WHERE country = 'Scotland' -- This command only shows
 ```sql
 <!-- Copy solution here -->
 SELECT code FROM divisions WHERE country = 'Deutschland'; -- provides the following codes: D1, D2.
-SELECT COUNT(*) FROM matches WHERE hometeam = 'Freiburg' OR awayteam = 'Freiburg';
+SELECT COUNT(*) FROM matches WHERE division_code AND (hometeam = 'Freiburg' OR awayteam = 'Freiburg');
 
 
 ```
